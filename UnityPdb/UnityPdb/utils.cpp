@@ -15,7 +15,7 @@ bool utils::load_file_to_memory(const std::string& file_path, std::vector<uint8_
 
 void utils::guid_to_string(const GUID guid, char* output)
 {
-	wsprintfA(output, "%x%x%x%x%x%x%x%x%x%x%x",
+	wsprintfA(output, "%08X%04X%04X%02X%02X%02X%02X%02X%02X%02X%02X",
 		guid.Data1, guid.Data2, guid.Data3,
 		guid.Data4[0], guid.Data4[1], guid.Data4[2], guid.Data4[3],
 		guid.Data4[4], guid.Data4[5], guid.Data4[6], guid.Data4[7]);
